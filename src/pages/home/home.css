@@ -1,0 +1,40 @@
+.Advertising-story-container{
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 8rem;
+    background-color: black;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+.productsList{
+    width:  100vw;
+    height: 250px;
+    background-color: black;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    overflow-x:scroll;
+    padding: 0px 5px;
+}
+.icon-left{
+    position: sticky;
+    left: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+.icon-right{
+    position:sticky;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+.icon-right:hover, .icon-left:hover{
+    color: rgb(205, 205, 205);
+    transition: 0.5s;
+    transform: scale(1.18);    
+}

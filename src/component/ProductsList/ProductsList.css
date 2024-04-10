@@ -1,0 +1,33 @@
+.productsBox{
+    background-color: rgb(240, 240, 240);
+    color: black;
+    min-width: 200px;
+    max-width: 230px;
+    height: 240px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 12px;
+}
+.offericon{
+    position: absolute;
+    right: -5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.img-Box {
+    text-align: center;
+    height: 55%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.img-Box img{
+    height: 100%;
+}
+.text-design{
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration:solid;
+}

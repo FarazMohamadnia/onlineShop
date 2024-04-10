@@ -1,0 +1,80 @@
+.swiper2{
+    width: 100%;
+    height: 12rem;
+    z-index: 0;
+}
+  
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide-div{
+    background-color: rgba(255, 255, 255, 0.466);
+    font-size: 14px;
+    position: absolute;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    height: 100%;
+    width: 20%;
+    top: 0px;
+    left: 0px;
+}
+.swiper-slide-div button{
+    width: 40%;
+    height: 18%;
+    border-radius: 10px;
+    background-color: black;
+    border: 1.5px solid white;
+    color: white;
+    padding: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.swiper-slide-div p{
+    width: 85%;
+    height: 82%;
+    margin: auto;
+    text-align: justify;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}

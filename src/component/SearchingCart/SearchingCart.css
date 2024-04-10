@@ -1,0 +1,14 @@
+.Searching-cart{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    font-size: 11px;
+    padding: 2.5px;
+    margin-top: 7px;
+}
+.Searching-cart img{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
