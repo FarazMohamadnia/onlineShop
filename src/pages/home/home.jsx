@@ -40,13 +40,24 @@ export default function Home(){
         <div>
             <Headers />
         </div>
+
+        <div className='Advertising-story-container' ref={scrl}>
+            <span  onClick={()=>slide(-120)} className='icon-left'><BsArrowLeftCircleFill size={'30px'}/></span>
+            {   
+                loadingTime1 == true ?<p>loading....</p>:
+                AdvertisingsData.map(item => (
+                    <AdvertisingStory {...item}/>
+                ))
+            }
+            <span onClick={() => slide(+120)} className='icon-right'><BsArrowRightCircleFill size={'30px'} /></span>
+        </div>
         <div className='productsList'>
         {
             loadingTime2 == true ?<p>loading....</p>: 
-            ProductsData.filter(item =>item.offer == true).map(datas => <Link to={`/Card/${datas.id}`}> <ProductsList {...datas}/> </Link> )
-            
-            
-        
+            ProductsData.filter(item =>item.offer == true)
+            .map(
+            datas => <Link to={`/Card/${datas.id}`}> <ProductsList {...datas}/> </Link> 
+            )
         }
         </div>
         <div className="d-flex m-3 justify-content-center flex-wrap justify-content-lg-start">
@@ -60,18 +71,29 @@ export default function Home(){
                 ))
             }
         </div>
-        <div className='Advertising-story-container' ref={scrl}>
-        <span  onClick={()=>slide(-120)} className='icon-left'><BsArrowLeftCircleFill size={'30px'}/></span>
-        {   
-            loadingTime1 == true ?<p>loading....</p>:
-            AdvertisingsData.map(item => (
-                <AdvertisingStory {...item}/>
-            ))
-        }
-        <span onClick={() => slide(+120)} className='icon-right'><BsArrowRightCircleFill size={'30px'} /></span>
-        </div>
         <div>
             <AutoplayProgress />
+        </div>
+        <div className='productsList'>
+            {
+                loadingTime2 == true ?<p>loading....</p>: 
+                ProductsData.filter(item =>item.offer == true)
+                .map(
+                datas => <Link to={`/Card/${datas.id}`}> <ProductsList {...datas}/> </Link> 
+                )
+            }
+        </div>
+
+        <div className="d-flex m-3 justify-content-center flex-wrap justify-content-lg-start">
+    
+            {
+                loadingTime2 == true ?<p>loading....</p>:
+                ProductsData.filter(item => item.offer == false).map(item =>(
+                <Link key={item.id} to={`/card/${item.id}`} data-aos="fade-right">
+                    <Card  {...item} />
+                </Link>
+                ))
+            }
         </div>
         <div>
             <Footer />
